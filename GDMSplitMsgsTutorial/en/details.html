@@ -15,6 +15,7 @@
 		<meta charset="UTF-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
 		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
 		<meta name="author" content="IBM">
 		<meta name="description" content="IBM Integration Bus V10 Tutorial">
@@ -42,16 +43,16 @@
   </div>
   <div class="row">
     <div class="small-9 medium-9 large-9 columns">
-      <h4>Subscribing to events using MQTT</h4>
+      <h4>Split a message into multiple messages by using the Graphical Data Mapping editor</h4>
     </div>
     <div class="small-3 medium-3 large-3 columns"> 
-      <a href="#" class="small right">IBM Knowledge Center</a> 
+      <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a>
     </div>
   </div> 
   <hr>
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
-      <h5> Learn how to use an MQTTSubscribe node to receive data from MQTT. </h5>
+      <h5> Learn how to use a message map and the Mapping node to graphically transform data and split a message into multiple messages by exploring this simple example. </h5>
     </div>
   </div>
   <div class="row content-details">
@@ -62,7 +63,21 @@
       <div class="row">
       
         
-        <p> This tutorial demonstrates a simple message flow that receives data over MQTT. The flow writes the data to an output file. </p>
+        <p> This tutorial demonstrates how to process an XML message that contains one or more sales data, in the form of a list of SaleList child XML elements. The input message is split into individual messages by creating a new message from each SaleList child element.  </p>
+      
+        <p> The solution is implemented as an application. Within the application, a message flow defines the steps required to implement the message transformation and the message split logic of the solution. </p>
+      
+        <p> The application takes as input one file with one or more records. Each record contains a list of items that a customer has bought in a store. </p>
+      
+        <p> The message models that represent the input message and the output message are defined by XML schemas and contained in a shared library. The library is then referenced by the application. </p>
+      
+        <p> A FileInput node is used to model the input step in the message flow. When the input node detects that a file with one or more records is available, it parses the content of the file, and sends the internal message representation to the next step in the flow. In this tutorial, an internal message is created for each sales item record in the input file. </p>
+      
+        <p> A Mapping node is used to model a graphical data transformation step in the message flow. The mapping node has an associated message map, also known as a graphical data map. </p>
+      
+        <p> The message map is the resource you use to define and implement the data transformation and message split requirements. </p>
+      
+        <p> A FileOutput node is used to place any output messages in the file system. </p>
       
       </div>
     </div><!-- End Columns -->
@@ -74,7 +89,7 @@
               <img class="icon-image" src="../../images/icons/ibmdesign/clock-time_128.png">
             </div>
             <div class="small-10 large-10 columns">
-              This tutorial takes approximately <b>5 minutes</b>.
+              This tutorial takes approximately <b>10 minutes</b>.
             </div>
           </div>
           <div class="row" style="margin-left: 1rem; text-align: center">
@@ -93,7 +108,25 @@
           <ul>
             
             
-              <li>MQTTSubscribe node</li>
+              <li>Transformation using the Graphical Data Mapping editor</li>
+            
+              <li>Spliting a message into multiple messages</li>
+            
+              <li>Integration solution</li>
+            
+              <li>Shared library</li>
+            
+              <li>Message model</li>
+            
+              <li>Message flow</li>
+            
+              <li>Message map (graphical data map)</li>
+            
+              <li>Mapping node</li>
+            
+              <li>FileInput node</li>
+            
+              <li>FileOutput node</li>
             
           </ul>
         </div>
@@ -102,7 +135,7 @@
           <ul>
           
           
-            <li>Use IBM Integration Bus to receive publications from MQTT.</li>
+            <li>Use IBM Integration Bus to graphically split a message into multiple messages.</li>
           
           </ul>
         </div>

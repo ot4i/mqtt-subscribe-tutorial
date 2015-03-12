@@ -15,6 +15,7 @@
 		<meta charset="UTF-8"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
 		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
 		<meta name="author" content="IBM">
 		<meta name="description" content="IBM Integration Bus V10 Tutorial">
@@ -42,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4>Subscribing to events using MQTT</h4>
+	    <h4>Split a message into multiple messages by using the Graphical Data Mapping editor</h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 	  	<div class="row">
@@ -53,7 +54,7 @@
 	<hr>
 	<div class="row">
 	  <div class="small-9 medium-10 large-10 columns">
-	    <h5> Learn how to use an MQTTSubscribe node to receive data from MQTT. </h5>
+	    <h5> Learn how to use a message map and the Mapping node to graphically transform data and split a message into multiple messages by exploring this simple example. </h5>
 	  </div>
 			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
 			</div>
@@ -83,9 +84,9 @@
 					      	<h4>Overview</h4>
 					        
 						    
-								<p> This tutorial demonstrates a simple message flow that receives JSON data over HTTP. The flow transforms the input JSON structure into a different output JSON structure using a graphical data mapping node and sends this back to the HTTP request. </p>
+								<p> This tutorial demonstrates how to create an integration solution that splits a message into multiple messages graphically. </p>
 							
-								<p> You will import the message flow to your Integration Toolkit workspace, deploy it to your default integration server, and invoke the message flow by using the Flow exerciser. </p>
+								<p> In this tutorial, a PI file is provided with the solution. You will import the solution to your IBM Integration Toolkit workspace, deploy it to your default test environment, and test the solution with the Flow exerciser. </p>
 							
 						</div>
 							
@@ -94,7 +95,49 @@
 							<ul>
 							
 								
+																
 								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bi12002_.htm')" title="Knowledge Center link to Developing integration solutions by using applications">Developing integration solutions by using applications</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/br28800_.htm')" title="Knowledge Center link to Transforming messages by using the Graphical Data Mapping editor">Transforming messages by using the Graphical Data Mapping editor</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/br28710_.htm')" title="Knowledge Center link to Mapping an input message to multiple output messages">Mapping an input message to multiple output messages</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bc23067_.htm')" title="Knowledge Center link to Shared libraries">Shared libraries</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bd40430_.htm')" title="Knowledge Center link to Message modeling">Message modeling</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac00310_.htm')" title="Knowledge Center link to Message flow">Message flow</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bc28600_.htm')" title="Knowledge Center link to Mapping Node">Mapping Node</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac55150_.htm')" title="Knowledge Center link to FileInput Node">FileInput Node</a> </li>
+							   	
+							
+								
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ac55160_.htm')" title="Knowledge Center link to FileOutput Node">FileOutput Node</a> </li>
+							   	
 							
 							</ul>
 						</div>	
@@ -104,10 +147,12 @@
 		    	<div class="content" id="panel21">
 		    		<div class="small-10 medium-10 large-10 columns divider">
 				      	<div class="row content-details">
-					      	<h4>Import projects</h4>
+					      	<h4>Import the integration solution into the development environment</h4>
 					        
 						    
-								<p> The HTTPInputApplication application includes one project that is imported into your workspace. </p>
+								<p> Click <b>Import</b> to add the integration solution to your IBM Integration Toolkit workspace. </p>
+							
+								<p> A shared library project and an application project are added in the Application Development view of your IBM Integration Toolkit workspace. These two projects contain all the development and test resources that you need to implement and run this solution. </p>
 							
 						</div>
 						
@@ -116,7 +161,9 @@
 							<ul>
 							
 								
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bi12002_.htm')" title="Knowledge Center link to Developing integration solutions by using applications">Developing integration solutions by using applications</a> </li>
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/ab00040_.htm')" title="Knowledge Center link to Integration Development perspective">Integration Development perspective</a> </li>
+							   	
 							
 							</ul>
 						</div>
@@ -129,14 +176,16 @@
 		    	<div class="content" id="panel31">
 		    		<div class="small-10 medium-10 large-10 columns divider">
 						<div class="row content-details">
-						  	<h4>Imported projects</h4>
+						  	<h4>Deploy the integration solution into the test environment</h4>
 						    
 						    
-								<p> The HTTPInputApplication application is shown in the Application Development view of your workspace. </p>
+								<p> In IBM Integration Bus, after you develop your solution, you deploy your integration solution to an integration server within an integration node. </p>
 							
-								<p>  </p>
+								<p> Click <b>Deploy</b> to deliver the solution from the development environment to the default, local test environment. </p>
 							
-								<p> The application will be deployed to your default integration server. The message flow is then running on your integration server and ready to process messages. </p>
+								<p> When you click Deploy, the shared library project and the application project are deployed into the default test environment: <b>TESTNODE_name_of_your_system</b> integration node, <b>default</b> integration server. </p>
+							
+								<p> You can check the Integration Nodes view in your IBM Integration Toolkit workspace to see the default integration node. If you expand the integration node, you can see the default integration server, as well as deployed resources. </p>
 							
 						</div>
 						
@@ -145,7 +194,9 @@
 							<ul>
 							
 								
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bi12002_.htm')" title="Knowledge Center link to Developing integration solutions by using integration services">Developing integration solutions by using integration services</a> </li>
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bb10600_.htm')" title="Knowledge Center link to Integration Nodes view">Integration Nodes view</a> </li>
+							   	
 							
 							</ul>
 						</div>
@@ -158,17 +209,17 @@
 		    	<div class="content" id="panel41">
 		    		<div class="small-10 medium-10 large-10 columns divider">
 				    	<div class="row content-details">
-					      	<h4>Follow these steps to complete the tutorial</h4>
+					      	<h4>Test the solution </h4>
 					        
 						    
-								<p> The HTTPInputApplication application is shown in the Application Development view of your workspace. </p>
+								<p> In the Application Development view of your workspace. </p>
 								
 								
 									
 									<ol>
 									
 									
-										<li> Open the HTTPInputMessageFlow, and click the Flow Exerciser icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/startFlowExerciser.png" alt> to start recording the message path through the flow.
+										<li> Open the SplitMessageIntoMultipleMessages.msgflow, and click the Flow Exerciser icon <img src="http://ot4i.github.io/ot4i.tutorials/dist/images/icons/iib/startFlowExerciser.png" alt> to start recording the message path through the flow.
 										
 										</li>
 									
@@ -211,10 +262,14 @@
 							<ul>
 							
 								
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bi12002_.htm')" title="Knowledge Center link to Developing integration solutions by using applications">Developing integration solutions by using applications</a> </li>
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/rt26110_.htm')" title="Knowledge Center link to Testing your message flow by using the Flow exerciser">Testing your message flow by using the Flow exerciser</a> </li>
+							   	
 							
 								
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/rt26110_.htm')" title="Knowledge Center link to Testing your message flow by using the Flow exerciser">Testing your message flow by using the Flow exerciser</a> </li>
+																
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bi12002_.htm')" title="Knowledge Center link to Developing integration solutions by using applications">Developing integration solutions by using applications</a> </li>
+							   	
 							
 							</ul>
 						</div>

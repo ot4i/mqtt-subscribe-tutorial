@@ -96,19 +96,19 @@
           ]
         },
         {
-          "name": "Subscribing to events using MQTT",
+          "name": "Split a message into multiple messages by using the Graphical Data Mapping editor",
           "version": "1.0",
           "iibVersions": "10.*-11.*",
-          "shortDesc": "Learn how to use an MQTTSubscribe node to receive data from MQTT.",
-          "detailsURL": "http://hosie.github.io/iib-tutorials/MQTTSubscribe/en/details.html",
-          "stepsURL": "http://hosie.github.io/iib-tutorials/MQTTSubscribe/en/steps.html",
-          "zipURL": "http://hosie.github.io/iib-tutorials/MQTTSubscribe/MQTTSubscribePI.zip",
+          "shortDesc": "Learn how to use a message map and the Mapping node to graphically transform data and split a message into multiple messages by exploring this simple example.",
+          "detailsURL": "http://hosie.github.io/mqtt-subscribe-tutorial/GDMSplitMsgsTutorial/en/details.html",
+          "stepsURL": "http://hosie.github.io/mqtt-subscribe-tutorial/GDMSplitMsgsTutorial/en/steps.html",
+          "zipURL": "http://hosie.github.io/mqtt-subscribe-tutorial/GDMSplitMsgsTutorial/GDMSplitMsgsTutorialPI.zip",
           "barFile": "<workspace>/MQTTSubscribe/MQTTSubscribe.bar",
           "visible": "true",
           "tags": "service;http;soap;transformation",
           "isPattern": "false",
           "isFavorite": "true",
-          "projects": "MQTTSubscribe",
+          "projects": "GDM_Transform_Split1msgintoNmsgs",
           "editorResPaths": [
             {
               "id": "MainArtefact",

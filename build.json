@@ -1,7 +1,8 @@
 {    
     "main" : {
       "project" : "MQTTSubscribe",
-      "artefact": "MQTTSubscribe.msgflow"
+      "artefact": "MQTTSubscribe.msgflow",
+      "editor": "flow"
     },
     "bar" : {
         "build" : false

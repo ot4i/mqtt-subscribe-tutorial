@@ -277,7 +277,7 @@
 							}
                         },
                         {
-                            "section": "Once you have completed these steps, click <span class='uicontrol'>Deploy</span> and the <span class='application'>MQTTSubscribe</span> application will be deployed to your default Integration Server. The message flow will be connected to the IoT foundation ready to receive the data published by your device."
+                            "section": "Once you have completed these steps, drag the <span class='application'>MQTTSubscribe</span> application from the <span class='uicontroll'>Application Development</span> view and drop it on an integration server in the <span class='uicontroll'>Integration Nodes</span> view. The application will be deployed to the integration server and the message flow will connect to the IoT foundation, ready to receive the data published by your device."
                         }
                     ]
                 },
@@ -293,8 +293,9 @@
                         }
                     ]
                 },
-                "actions": 
+                "actions-remove": 
 				{
+				    "comment":" as the user needs to configure some of the properites on the flow in the create steap, we cannot have a pre-buitl bar file, therefore cannot use the deploy action",
                     "title": "Prepare Actions",
                     "details": 
 					[

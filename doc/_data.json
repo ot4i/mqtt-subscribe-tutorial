@@ -375,18 +375,7 @@
                         }
                     ]
                 },
-                "actions": 
-				{
-                    "title": "Run Actions",
-                    "details": 
-					[
-                        {
-                            "name": "Deploy",
-                            "method": "deployArtifacts()"
-                        }
-                    ]
-                },
-				"exits": 
+                "exits": 
 				{
 					"title": "Run Exits",
 					"details": 

@@ -144,7 +144,7 @@
                                 "details": 
 								[
                                     {
-                                        "details": "On your smartphone/tablet/computer, start the simulator by browsing to <a href='http://quickstart.internetofthings.ibmcloud.com/iotsensor'>http://quickstart.internetofthings.ibmcloud.com/iotsensor</a>. The simulator connects automatically and starts publishing data. Keep your simulator window active and in the foreground."
+                                        "details": "On your smartphone/tablet/computer, start the simulator by browsing to <a href='http://quickstart.internetofthings.ibmcloud.com/iotsensor' target='_blank'>http://quickstart.internetofthings.ibmcloud.com/iotsensor</a>. The simulator connects automatically and starts publishing data. Keep your simulator window active and in the foreground."
                                     },
                                     {
                                         "details":"Take a note of the MAC address of the device. This is seen in the top right of the device screen. You will need this to complete the configuration of the message flow."

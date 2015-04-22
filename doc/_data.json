@@ -60,6 +60,12 @@
 			[
                 {
                     "title": "Use IBM Integration Bus to receive data from an MQTT broker."
+                },
+                {
+                    "title": "Basic configuration of the MQTTSubscribe node."
+                },
+                {
+                    "title": "Introduction to IBM IoT Foundation."
                 }
             ],
             "summary": 
@@ -190,7 +196,7 @@
 							                "details": 
 							                [
 								            {
-									            "details": "<b>You might like to know:</b> When data is published over MQTT, they are published on a particular topic. The topic string is hierarchical and is normally used to indicate some categorisation of the data that is meaningful in the particular domain. Applications subscribe to particular topics and can use wildcards to subscribe to many topics with a single topic string. In the case of IoT foundation quickstart, the topic name includes the id of the device that published the data. Subscribing applications must specify the device id explicitly although wildcard (<span class='code'>+</span>) may be used elsewhere in the topic string, as we have done in this tutorial."
+									            "details": "<b>You might like to know:</b> When data is published over MQTT, they are published on a particular topic. The topic string is hierarchical and is normally used to indicate some categorisation of the data that is meaningful in the particular domain. Receiving applications subscribe to particular topics and can use wildcards to subscribe to many topics with a single topic string. In the case of IoT foundation quickstart, the topic name includes the id of the device that published the data. Subscribing applications must specify the device id explicitly although wildcard (<span class='code'>+</span>) may be used elsewhere in the topic string, as we have done in this tutorial."
 								            }
 							                ]
 						                }

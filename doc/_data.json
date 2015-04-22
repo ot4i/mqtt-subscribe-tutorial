@@ -78,10 +78,10 @@
                         "section": "This tutorial demonstrates a simple message flow that connects to IBM's Internet of Things Foundation and receives events published by a device simulator over the MQTT protocol. The message flow writes the event data to a file."
                     },
                     {
-                        "section": "MQTT is a open protocol for remote communication using a publish and subscribe model. Devices and applications can publish data on named topics and other applications or devices can subscribe to receive data that are published on particular topics. IBM Internet of Things (IoT) Foundation hosts a quickstart demonstration service. This tutorial connects to that service and illustrates how to use a message fow to receive data over MQTT. To publish the data, you will use the device simulator provided by the IoT Foundation."
+                        "section": "MQTT is a open protocol for remote communication using a publish and subscribe model. Devices and applications can publish data on named topics and other applications or devices can subscribe to receive data that are published on particular topics."
                     },
                     {
-                        "section": "IBM Internet of Things (IoT) Foundation hosts an MQTT broker on the internet and provides a quickstart demonstration service. This tutorial connects to that service and illustrates how to use a message fow to receive data over MQTT. To publish the data, you will use the device simulator provided by the IoT Foundation."
+                        "section": "IBM Internet of Things (IoT) Foundation hosts an MQTT broker on the internet and provides a quickstart demonstration service. This tutorial connects to that service and illustrates how to use a message flow to receive data over MQTT. To publish the data, you will use the device simulator provided by the IoT Foundation."
                     }
                 ]
             },
@@ -287,7 +287,7 @@
                                 "details": 
 								[
                                     {
-                                        "details": "Create the output directory <span class='userinput'>C:\\fileout</span> on your local filesystem or change the <span class='parmname'>Directory</span> property of the FileOutput node to a directory that exists and your current user id has write access.",
+                                        "details": "Create the output directory <span class='userinput'>C:\\fileout</span> on your local file system or change the <span class='parmname'>Directory</span> property of the FileOutput node to a directory that exists and your current user id has write access.",
                                         "substeps": 
 						                {   
 							                "type": "unordered",
@@ -342,13 +342,13 @@
                     "sections": 
 					[
                         {
-                            "section": "The message flow will immediately start receving data, that is published by the device simulator that you launched in the <span class='uicontrol'>Create</span> step, and will write that data to a file in the directory that you created in the <span class='uicontrol'>prepare</span> step."
+                            "section": "The message flow will immediately start receiving data, that is published by the device simulator that you launched in the <span class='uicontrol'>Create</span> step, and will write that data to a file in the directory that you created in the <span class='uicontrol'>prepare</span> step."
                         },
                         {
-                            "section": "Change some of the metrics ( temparature/humidity) on the device simulator and open the output file again to see new events with those values appended at the end of the file."
+                            "section": "Change some of the metrics (temperature/humidity) on the device simulator and open the output file again to see new events with those values appended at the end of the file."
                         },
                         {
-                            "section": "In addition to this, you can use the flow exerciser to inspect other information, about the publication, that is avaialbe in the message flow",
+                            "section": "In addition to this, you can use the flow exerciser to inspect other information, about the publication, that is available in the message flow",
                             "steps": 
 							{
                                 "type": "ordered",
@@ -371,13 +371,13 @@
                                             "details": 
 											[
                                                 {
-                                                    "details": "NOTE: the data is formated as XML by the UI for the puposes of rendering it through the flow exerciser but in reality, it remains as JSON as passes from IoT foundation, through the message flow and into the output file."
+                                                    "details": "NOTE: the data is formatted as XML by the UI for the purpose of rendering it through the flow exerciser but in reality, it remains as JSON as passes from IoT foundation, through the message flow and into the output file."
                                                 }
                                             ]
                                         }
                                     },
                                     {
-                                        "details": "Expand the <span class='code'>LocalEnvironment</span> folder and you will see extra information about the publication. It woudl be possible to add other nodes to the message flow that could process this information or even copy it to the output file."
+                                        "details": "Expand the <span class='code'>LocalEnvironment</span> folder and you will see extra information about the publication. It would be possible to add other nodes to the message flow that could process this information or even copy it to the output file."
                                     }
                                 ]
                             }

@@ -21,7 +21,7 @@
                 },
 				"buttonViewDetails": 
 				{
-                    "name": "View Details",
+                    "name": "Back to Overview",
 					"method": "viewDetails()",
 					"idName": "stepsViewDetails"	
                 }
@@ -65,6 +65,9 @@
                     "title": "Basic configuration of the MQTTSubscribe node."
                 },
                 {
+                    "title": "Understand the information written to the Local Environment when receiving data over MQTT."
+                },
+                {
                     "title": "Introduction to IBM IoT Foundation."
                 }
             ],
@@ -78,7 +81,7 @@
                         "section": "This tutorial demonstrates a simple message flow that connects to IBM's Internet of Things Foundation and receives events published by a device simulator over the MQTT protocol. The message flow writes the event data to a file."
                     },
                     {
-                        "section": "MQTT is a open protocol for remote communication using a publish and subscribe model. Devices and applications can publish data on named topics and other applications or devices can subscribe to receive data that are published on particular topics."
+                        "section": "MQTT is an open protocol for remote communication using a publish and subscribe model. Devices and applications can publish data on named topics and other applications or devices can subscribe to receive data that are published on particular topics."
                     },
                     {
                         "section": "IBM Internet of Things (IoT) Foundation hosts an MQTT broker on the internet and provides a quickstart demonstration service. This tutorial connects to that service and illustrates how to use a message flow to receive data over MQTT. To publish the data, you will use the device simulator provided by the IoT Foundation."
@@ -183,7 +186,7 @@
 							                "details": 
 							                [
 								            {
-									            "details": "<b>You might like to know:</b> In the MQTT protocol, the client id is used to uniquely identify a device or an instance of an application that is connected to an MQTT broker. Each device and application must specify a different client id. In any particular instance of an MQTT broker, there may be a certain convention to follow when choosing the client id. In the case of IBM IoT Foundation quickstart, the convention is that applications must specify a client id with the form <span class='code'>a:quickstart:&lt;unique-name&gt;</span> where <span class='code'>&lt;unique-name&gt</span> is a value chose by the application to be unique across all applications connecting to the quickstart service. This convention must be followed otherwise the application will fail to connect to the IoT Foundation"
+									            "details": "<b>You might like to know:</b> In the MQTT protocol, the client id is used to uniquely identify a device or an instance of an application that is connected to an MQTT broker. Each device and application must specify a different client id. In any particular instance of an MQTT broker, there may be a certain convention to follow when choosing the client id. In the case of IBM IoT Foundation quickstart, the convention is that applications must specify a client id with the form <span class='code'>a:quickstart:&lt;unique-name&gt;</span> where <span class='code'>&lt;unique-name&gt</span> is a value chose by the application to be unique across all applications connecting to the quickstart service. This convention must be followed otherwise the application will fail to connect to the IoT Foundation."
 								            }
 							                ]
 						                }
@@ -342,7 +345,7 @@
                     "sections": 
 					[
                         {
-                            "section": "The message flow will immediately start receiving data, that is published by the device simulator that you launched in the <span class='uicontrol'>Create</span> step, and will write that data to a file in the directory that you created in the <span class='uicontrol'>prepare</span> step."
+                            "section": "The message flow will immediately start receiving data, that is published by the device simulator that you launched in the <span class='uicontrol'>Create</span> step, and will write that data to a file in the directory that you created in the <span class='uicontrol'>Prepare</span> step."
                         },
                         {
                             "section": "Change some of the metrics (temperature/humidity) on the device simulator and open the output file again to see new events with those values appended at the end of the file."
@@ -417,4 +420,5 @@
         }
     }
 }
+
 

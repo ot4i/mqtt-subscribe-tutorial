@@ -170,10 +170,30 @@
                                         "details":"Select the MQTTSubscribe node in the message flow and look at the <span class='uicontrol'>Properties</span> view"
                                     },
                                     {
-                                        "details":"The <span class='parmname'>Client ID</span> property is blank and must be configured with a valid value. When connecting to the IoT Foundation quickstart, the Client ID must be of the form <span class='userinput'>a:quickstart:&lt;unique-name&gt;</span>. Chose a value for <span class='userinput'>&lt;unique-name&gt;</span> that is unlikely to be chosen by anyone else and enter the <span class='parmname'>Client ID</span> field. For example, chosing my name and birth year to avoid clashing with other people, I would enter <span class='userinput'>a:quickstart:hosie75</span>."
+                                        "details":"The <span class='parmname'>Client ID</span> property is blank and must be configured with a valid value. Enter the value <span class='userinput'>a:quickstart:&lt;unique-name&gt;</span> where <span class='userinput'>&lt;unique-name&gt;</span> is a value that you can chose and is unlikely to be chosen by anyone else. For example, choosing my name and birth year to avoid clashing with other people, I would enter <span class='userinput'>a:quickstart:hosie75</span>.",
+                                        "substeps": 
+						                {   
+							                "type": "unordered",
+							                "details": 
+							                [
+								            {
+									            "details": "<b>You might like to know:</b> In the MQTT protocol, the client id is used to uniquely identify a device or an instance of an application that is connected to an MQTT broker. Each device and application must specify a different client id. In any particular instance of an MQTT broker, there may be a certain convention to follow when choosing the client id. In the case of IBM IoT Foundation quickstart, the convention is that applications must specify a client id with the form <span class='code'>a:quickstart:&lt;unique-name&gt;</span> where <span class='code'>&lt;unique-name&gt</span> is a value chose by the application to be unique across all applications connecting to the quickstart service. This convention must be followed otherwise the application will fail to connect to the IoT Foundation"
+								            }
+							                ]
+						                }
                                     },
                                     {
-                                        "details":"The <span class='parmname'>Topic name</span> property is blank and must be configured with a valid value. When connecting to the IoT Foundation quickstart to receive data, topic name must be of the form <span class='userinput'>iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class='userinput'>&lt;deviceid&gt;</span> is the MAC address of the device whose data you are subscribing to - with colons removed and all letters in lower case. Refer to the MAC Address of the device that you simulated in the earlier step and enter the whole topic name. For example, if the MAC Address of your device is C2:AC:80:42:DA:D7 then the <span class='parmname'>Topic name</span> must be entered as <span class='userinput'>iot-2/type/+/id/c2ac8042dad7/evt/+/fmt/+</span>."
+                                        "details":"The <span class='parmname'>Topic name</span> property is blank and must be configured with a valid value. Enter the value  <span class='userinput'>iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class='userinput'>&lt;deviceid&gt;</span> is the MAC address of the device, that you simulated in the earlier step, with colons removed and all letters in lower case. For example, if the MAC Address of your device is C2:AC:80:42:DA:D7 then the Topic name must be entered as <span class='userinput'>iot-2/type/+/id/c2ac8042dad7/evt/+/fmt/+</span>.",
+                                        "substeps": 
+						                {   
+							                "type": "unordered",
+							                "details": 
+							                [
+								            {
+									            "details": "<b>You might like to know:</b> When data is published over MQTT, they are published on a particular topic. The topic string is hierarchical and is normally used to indicate some categorisation of the data that is meaningful in the particular domain. Applications subscribe to particular topics and can use wildcards to subscribe to many topics with a single topic string. In the case of IoT foundation quickstart, the topic name includes the id of the device that published the data. Subscribing applications must specify the device id explicitly although wildcard (<span class='code'>+</span>) may be used elsewhere in the topic string, as we have done in this tutorial."
+								            }
+							                ]
+						                }
                                     },
                                     {
                                         "details":"Save the message flow."
@@ -391,3 +411,4 @@
         }
     }
 }
+

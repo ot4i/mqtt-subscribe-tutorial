@@ -35,7 +35,7 @@
             "name": "Subscribing to receive MQTT events",
             "shortDescription": "Learn how to use the MQTT Subscribe node to receive data from an MQTT broker.",
             "durationText": "This tutorial takes approximately",
-            "durationTime": "5 minutes",
+            "durationTime": "10 minutes",
             "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
             "resourceToOpen": "MQTTSubscribe",
             "helpLink": 

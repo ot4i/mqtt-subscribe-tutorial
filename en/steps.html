@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
  
@@ -43,7 +44,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Subscribing to receive MQTT events <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> Back to Overview</div> </action></h4>
+	    <h4 class="title">Receiving MQTT messages by subscribing to MQTT topics <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> Back to Overview</div> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -52,7 +53,7 @@
 	<hr>
 	<div class="row">
 		<div class="small-10 medium-10 large-10 columns">
-		<h5> Learn how to use the MQTT Subscribe node to receive data from an MQTT broker. </h5>
+		<h5> Learn how to use the MQTTSubscribe node to receive messages from an MQTT server. </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
 			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
@@ -82,7 +83,7 @@
 					      	<h4>Create the message flow and the device</h4>
 					        
 						    
-								<p> Create a device that is connected to IoT Foundation and will publish data on a topic that the message flow can subscribe to. </p>
+								<p> Create a device that is connected to the IoT Foundation and will publish data on a topic that the message flow can subscribe to. </p>
 								
 								
 									
@@ -93,7 +94,7 @@
 										
 										</li>
 									
-										<li> Take a note of the MAC address of the device. This is seen in the top right of the device screen. You will need this to complete the configuration of the message flow.
+										<li> Note the MAC address of the simulated device (displayed in the top right corner of the device screen; for example AF:01:C7:BB:E5:72). You will need this to complete the configuration of the message flow.
 										
 										</li>
 									
@@ -109,22 +110,22 @@
 									<ol>
 									
 									
-										<li> Click the <span class="uicontrol">Import</span> button on the right of this view and the MQTTSubscribe application which includes a partially complete Message flow will be imported into your workspace.
+										<li> Click the <span class="uicontrol">Import</span> button on the right of this view. The MQTTSubscribe application, which includes a partially complete message flow, will be imported into your workspace.
 										
 										</li>
 									
-										<li> The <span class="uicontrol">MQTTSubscribe</span> message flow should be open in the Message Flow editor. If not, locate it under the flows section of the <span class="application">MQTTSubscribe</span> application and double click to open it for editing.
+										<li> The <span class="uicontrol">MQTTSubscribe</span> message flow should be open in the Message Flow editor. If it is not, locate the message flow under the Flows section of the <span class="application">MQTTSubscribe</span> application, and double click it to open for editing.
 										
 										</li>
 									
-										<li> Select the MQTTSubscribe node in the message flow and look at the <span class="uicontrol">Properties</span> view
+										<li> Select the MQTTSubscribe node in the message flow and look at the <span class="uicontrol">Properties</span> view.
 										
 										
 											
 											<ul>
 											
 												
-													<li> <b>Tip:</b> To allow you to see the properties view and the tutorial steps at the same time, move this current view to the right hand side of the message flow editor by dragging and dropping the tab at the top of this view, where you see the title <span class="�uicontrol�">Tutorial Steps View</span>.</li>
+													<li> <b>Tip:</b> To allow you to see the properties view and the tutorial steps at the same time, move this current tutorial steps view to the right side of the message flow editor, by dragging and dropping the <span class="uicontrol">Tutorial Steps View</span> tab at the top of this view.</li>
 												
 											
 											</ul>
@@ -132,18 +133,18 @@
 										
 										</li>
 									
-										<li> Some of the properties have already been configured with values. The <span class="�parmname�">Host name</span> and  <span class="�parmname�">Port</span> are configured to connect to the IoT Foundation MQTT broker that is hosted on the internet.
+										<li> Some of the MQTTSubscribe node properties have already been configured with values. The <span class="parmname">Host name</span> and  <span class="parmname">Port</span> are configured to connect to the IoT Foundation MQTT server that is hosted on the internet.
 										
 										</li>
 									
-										<li> The <span class="parmname">Client ID</span> property is blank and must be configured with a valid value. Enter the value <span class="userinput">a:quickstart:&lt;unique-name&gt;</span> where <span class="userinput">&lt;unique-name&gt;</span> is a value that you can chose and is unlikely to be chosen by anyone else. For example, choosing my name and birth year to avoid clashing with other people, I would enter <span class="userinput">a:quickstart:hosie75</span>.
+										<li> The <span class="parmname">Client ID</span> property is blank and must be configured with a valid value. Enter the value <span class="userinput">a:quickstart:&lt;unique-name&gt;</span> where <span class="userinput">&lt;unique-name&gt;</span> is a value you choose that is unlikely to be chosen by anyone else. For example, you might choose your name and birth year to avoid clashing with other people, such as <span class="userinput">a:quickstart:hosie75</span>.
 										
 										
 											
 											<ul>
 											
 												
-													<li> <b>You might like to know:</b> In the MQTT protocol, the client id is used to uniquely identify a device or an instance of an application that is connected to an MQTT broker. Each device and application must specify a different client id. In any particular instance of an MQTT broker, there may be a certain convention to follow when choosing the client id. In the case of IBM IoT Foundation quickstart, the convention is that applications must specify a client id with the form <span class="code">a:quickstart:&lt;unique-name&gt;</span> where <span class="code">&lt;unique-name&gt</span> is a value chose by the application to be unique across all applications connecting to the quickstart service. This convention must be followed otherwise the application will fail to connect to the IoT Foundation.</li>
+													<li> <b>You might like to know:</b> In the MQTT protocol, the client ID is used to uniquely identify a device or an instance of an application that is connected to an MQTT server. Each device or application must specify a different client ID. In any particular instance of an MQTT server, there might be a defined convention to follow when choosing the client ID. In the case of the IBM IoT Foundation quickstart, the convention is that applications must specify a client ID with the form <span class="code">a:quickstart:&lt;unique-name&gt;</span> where <span class="code">&lt;unique-name&gt</span> is a value chosen by the application to be unique across all applications connecting to the quickstart service. This convention must be followed, otherwise the application will fail to connect to the IoT Foundation.</li>
 												
 											
 											</ul>
@@ -151,14 +152,14 @@
 										
 										</li>
 									
-										<li> The <span class="parmname">Topic name</span> property is blank and must be configured with a valid value. Enter the value  <span class="userinput">iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class="userinput">&lt;deviceid&gt;</span> is the MAC address of the device, that you simulated in the earlier step, with colons removed and all letters in lower case. For example, if the MAC Address of your device is C2:AC:80:42:DA:D7 then the Topic name must be entered as <span class="userinput">iot-2/type/+/id/c2ac8042dad7/evt/+/fmt/+</span>.
+										<li> The <span class="parmname">Topic name</span> property is blank and must be configured with a valid value. Enter the value <span class="userinput">iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class="userinput">&lt;deviceid&gt;</span> is the MAC address of the device that you simulated in the earlier step, with the colons removed and all letters in lowercase. For example, if the MAC address of your device is C2:AC:80:42:DA:D7 then the Topic name must be entered as <span class="userinput">iot-2/type/+/id/c2ac8042dad7/evt/+/fmt/+</span>.
 										
 										
 											
 											<ul>
 											
 												
-													<li> <b>You might like to know:</b> When data is published over MQTT, they are published on a particular topic. The topic string is hierarchical and is normally used to indicate some categorisation of the data that is meaningful in the particular domain. Receiving applications subscribe to particular topics and can use wildcards to subscribe to many topics with a single topic string. In the case of IoT Foundation quickstart, the topic name includes the id of the device that published the data. Subscribing applications must specify the device id explicitly although wildcard (<span class="code">+</span>) may be used elsewhere in the topic string, as we have done in this tutorial.</li>
+													<li> <b>You might like to know:</b> When message data is published over MQTT, it is published on a particular topic. The topic string is hierarchical, and is normally used to indicate some categorization of the data that is meaningful in the particular domain. Receiving applications subscribe to particular topics and can use wildcards to subscribe to many topics within a single topic string. In the case of the IoT Foundation quickstart, the topic name includes the ID of the device that published the data. Subscribing applications must specify the device ID explicitly, although a wildcard (<span class="code">+</span>) may be used elsewhere in the topic string, as shown in this tutorial.</li>
 												
 											
 											</ul>
@@ -170,7 +171,7 @@
 										
 										</li>
 									
-										<li> Ensure that there no errors associated with the message flow.
+										<li> Ensure that there are no errors associated with the message flow.
 										
 										</li>
 									
@@ -202,17 +203,17 @@
 							
 								
 								
-								<li> <a href="javascript:;" onclick="openExternalBrowser('https://internetofthings.ibmcloud.com/#/')" title="IBM Internet of Things Foundation IBM Internet of Things Foundation">IBM Internet of Things Foundation</a> </li>
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://internetofthings.ibmcloud.com/#/')" title="Website link to  IBM Internet of Things Foundation">IBM Internet of Things Foundation</a> </li>
 									
 							
 								
 								
-								<li> <a href="javascript:;" onclick="openExternalBrowser('https://developer.ibm.com/iot/recipes/application-development-quickstart/')" title="IBM Internet of Things Foundation Connecting applications to IoT Foundation quickstart">Connecting applications to IoT Foundation quickstart</a> </li>
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://developer.ibm.com/iot/recipes/application-development-quickstart/')" title="Website link to  Connecting applications to IoT Foundation quickstart">Connecting applications to IoT Foundation quickstart</a> </li>
 									
 							
 								
 								
-								<li> <a href="javascript:;" onclick="openExternalBrowser('https://developer.ibm.com/iot/recipes/simulator/')" title="IBM Internet of Things Foundation Device simulator for IoT Foundation quickstart">Device simulator for IoT Foundation quickstart</a> </li>
+								<li> <a href="javascript:;" onclick="openExternalBrowser('https://developer.ibm.com/iot/recipes/simulator/')" title="Website link to  Device simulator for IoT Foundation quickstart">Device simulator for IoT Foundation quickstart</a> </li>
 									
 							
 							</ul>
@@ -236,24 +237,24 @@
 						  	<h4>Deploy Application</h4>
 						    
 						    
-								<p> Before deploying the application, we must make sure that the file system is ready for the data to be written to the output file by the message flow. </p>
+								<p> Before deploying the application, you must ensure that the file system is ready for the data to be written to the output file by the message flow. </p>
 								
 							
-								<p> The file output node is configured to write the data to a file in the output directory <span class="userinput">C:\fileout</span> </p>
+								<p> The FileOoutput node is configured to write the data to a file in the output directory <span class="userinput">C:\fileout</span> </p>
 								
 								
 									
 									<ul>
 									
 									
-										<li> Create the output directory <span class="userinput">C:\fileout</span> on your local file system or change the <span class="parmname">Directory</span> property of the FileOutput node to a directory that exists and your current user id has write access.
+										<li> Create the output directory <span class="userinput">C:\fileout</span> on your local file system, or change the <span class="parmname">Directory</span> property of the FileOutput node to a directory that exists and that your current user ID has write access to.
 										
 										
 											
 											<ul>
 											
 												
-													<li> If you are using Linux, then you will probably need to change the <span class="parmname">Directory</span> property.</li>
+													<li> If you are using Linux, then you probably will need to change the <span class="parmname">Directory</span> property.</li>
 												
 											
 											</ul>
@@ -273,7 +274,7 @@
 									<ul>
 									
 									
-										<li> If you have a firewall on your computer, you might be asked to allow the <span class="code">DataFlowEngine.exe</span> process to connect to <span class="code">quickstart.messaging.internetofthings.ibmcloud.com</span>. If you do not allow this connection, then the message flow will fail to connect to the IoT Foundation and you will not be able to complete this tutorial.
+										<li> If you have a firewall on your computer, you might be asked to allow the <span class="code">DataFlowEngine.exe</span> process to connect to <span class="code">quickstart.messaging.internetofthings.ibmcloud.com</span>. You must allow this connection in order to complete this tutorial.
 										
 										</li>
 									
@@ -312,13 +313,13 @@
 					      	<h4>Follow these steps to complete the tutorial</h4>
 					        
 						    
-								<p> The message flow will immediately start receiving data, that is published by the device simulator that you launched in the <span class="uicontrol">Create</span> step, and will write that data to a file in the directory that you created in the <span class="uicontrol">Prepare</span> step. </p>
+								<p> The message flow will immediately start receiving data that is published by the device simulator that you launched in the <span class="uicontrol">Create</span> step, and will write that data to a file in the directory that you created in the <span class="uicontrol">Prepare</span> step. </p>
 								
 							
-								<p> Change some of the metrics (temperature/humidity) on the device simulator and open the output file again to see new events with those values appended at the end of the file. </p>
+								<p> Change some of the metrics (temperature/humidity) on the device simulator and open the output file to see new events with those values appended to the end of the file. </p>
 								
 							
-								<p> In addition to this, you can use the flow exerciser to inspect other information, about the publication, that is available in the message flow </p>
+								<p> In addition to this, you can use the Flow Exerciser to inspect other publication information that is available in the message flow. </p>
 								
 								
 									
@@ -332,7 +333,7 @@
 											<ul>
 											
 												
-													<li> <b>Take care:</b> If you have more than one Integration Server available, then you will be presented with a choice of which integration server to use to record this message flow.  Make sure that you chose the same one that you deployed to in the <span class="�uicontrol�">Prepare</span> otherwise, you will have 2 separate instances of the message flow trying to connect to the MQTT broker with the same client id and that will cause errors.</li>
+													<li> <b>Take care:</b> If you have more than one integration server available, then you will have to choose which integration server to use to record this message flow.  Ensure that you choose the same one that you deployed to in the <span class="uicontrol">Prepare</span> step, otherwise you will have two separate instances of the message flow trying to connect to the MQTT server with the same client ID, and that will cause errors.</li>
 												
 											
 											</ul>
@@ -340,7 +341,7 @@
 										
 										</li>
 									
-										<li> Wait a few seconds to ensure that, at least one, event is published.
+										<li> Wait a few seconds to ensure that at least one event is published.
 										
 										</li>
 									
@@ -348,14 +349,14 @@
 										
 										</li>
 									
-										<li> In the <span class="code">Message</span> tree, you will see the <span class="code">Properties</span> folder followed by a <span class="code">JSON</span> folder that shows the same data that was written to the output file.
+										<li> In the <span class="code">Message</span> tree of the data, you will see the <span class="code">Properties</span> folder followed by a <span class="code">JSON</span> folder, and this shows the same data that was written to the output file.
 										
 										
 											
 											<ul>
 											
 												
-													<li> NOTE: the data is formatted as XML by the UI for the purpose of rendering it through the flow exerciser but in reality, it remains as JSON as passes from IoT foundation, through the message flow and into the output file.</li>
+													<li> NOTE: the data is formatted as XML by the UI for the purpose of rendering it through the Flow Exerciser, but in fact it remains as JSON as it passes from the IoT Foundation, through the message flow, and into the output file.</li>
 												
 											
 											</ul>
@@ -363,7 +364,7 @@
 										
 										</li>
 									
-										<li> Expand the <span class="code">LocalEnvironment</span> folder and you will see extra information about the publication. It would be possible to add other nodes to the message flow that could process this information or even copy it to the output file.
+										<li> Expand the <span class="code">LocalEnvironment</span> folder and you will see extra information about the publication. It is possible to add other nodes to the message flow that could process this information or even copy it to the output file.
 										
 										</li>
 									

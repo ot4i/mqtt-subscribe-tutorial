@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="no-js" lang="en">
  
@@ -16,14 +15,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="copyright" content="Copyright IBM Corporation 2014" />
-		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="abstract" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="author" content="IBM">
-		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="description" content="IBM App Connect Enterprise V11 Tutorial">
 		<meta name="keywords" content="keywords" > 
 		<meta name="robots" content="index,follow">
-		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		<meta name="source" content="IBM App Connect Enterprise V11 Tutorial" /> 
 		
-		<title>IBM Integration Bus V10 Tutorial</title>
+		<title>IBM App Connect Enterprise V11 Tutorial</title>
 
     	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
 		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
@@ -44,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Receiving MQTT messages by subscribing to MQTT topics <action><div class="small radius button" id="stepsViewDetails" onclick="viewDetails()"> Back to Overview</div> </action></h4>
+	    <h4 class="title">Using the MQTTSubscribe node to receive MQTT messages from MQTT topics <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> Back to Overview</button> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -56,8 +55,8 @@
 		<h5> Learn how to use the MQTTSubscribe node to receive messages from an MQTT server. </h5>
 		</div>
 		<div class="small-2 medium-2 large-2 columns">
-			<div class="small radius button right" id="backToGallery" onclick="backToGallery()"> Back To Gallery
-			</div>
+			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</button>
 		</div>
 	</div>
 	<div class="row">          
@@ -94,7 +93,7 @@
 										
 										</li>
 									
-										<li> Note the MAC address of the simulated device (displayed in the top right corner of the device screen; for example AF:01:C7:BB:E5:72). You will need this to complete the configuration of the message flow.
+										<li> Note the MAC address of the simulated device (displayed in the top right corner of the device screen; for example a9a557601865). You will need this to complete the configuration of the message flow.
 										
 										</li>
 									
@@ -152,7 +151,7 @@
 										
 										</li>
 									
-										<li> The <span class="parmname">Topic name</span> property is blank and must be configured with a valid value. Enter the value <span class="userinput">iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class="userinput">&lt;deviceid&gt;</span> is the MAC address of the device that you simulated in the earlier step, with the colons removed and all letters in lowercase. For example, if the MAC address of your device is C2:AC:80:42:DA:D7 then the Topic name must be entered as <span class="userinput">iot-2/type/+/id/c2ac8042dad7/evt/+/fmt/+</span>.
+										<li> The <span class="parmname">Topic name</span> property is blank and must be configured with a valid value. Enter the value <span class="userinput">iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class="userinput">&lt;deviceid&gt;</span> identifies the MAC address of the device that you simulated in the earlier step (in the tutorial example a9a557601865, which is entered into the Topic name as <span class="userinput">iot-2/type/+/id/a9a557601865/evt/+/fmt/+</span>.
 										
 										
 											
@@ -193,7 +192,7 @@
 							
 								
 																
-								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bc62000_.htm')" title="Knowledge Center link to Processing MQTT messages in IBM Integration Bus">Processing MQTT messages in IBM Integration Bus</a> </li>
+								<li> <a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.mft.doc/bc62000_.htm')" title="Knowledge Center link to Processing MQTT messages in IBM App Connect Enterprise">Processing MQTT messages in IBM App Connect Enterprise</a> </li>
 							   	
 							
 								
@@ -240,7 +239,7 @@
 								<p> Before deploying the application, you must ensure that the file system is ready for the data to be written to the output file by the message flow. </p>
 								
 							
-								<p> The FileOoutput node is configured to write the data to a file in the output directory <span class="userinput">C:\fileout</span> </p>
+								<p> The FileOutput node is configured to write the data to a file in the output directory <span class="userinput">C:\fileout</span> </p>
 								
 								
 									
@@ -254,7 +253,7 @@
 											<ul>
 											
 												
-													<li> If you are using Linux, then you probably will need to change the <span class="parmname">Directory</span> property.</li>
+													<li> If you are using Linux, then you will need to change the <span class="parmname">Directory</span> property.</li>
 												
 											
 											</ul>

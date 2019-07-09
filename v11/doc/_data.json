@@ -32,7 +32,7 @@
 	{
         "_common": 
 		{
-            "name": "Receiving MQTT messages by subscribing to MQTT topics",
+            "name": "Using the MQTTSubscribe node to receive MQTT messages from MQTT topics",
             "shortDescription": "Learn how to use the MQTTSubscribe node to receive messages from an MQTT server.",
             "durationText": "This tutorial takes approximately",
             "durationTime": "10 minutes",
@@ -59,7 +59,7 @@
             "outcomeList": 
 			[
                 {
-                    "title": "Receive messages from an MQTT server by using IBM Integration Bus."
+                    "title": "Receive messages from an MQTT server by using IBM App Connect Enterprise."
                 },
                 {
                     "title": "Understand the basic configuration of the MQTTSubscribe node."
@@ -74,7 +74,7 @@
             "summary": 
 			{
                 "overviewName": "OVERVIEW",
-                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the IIB concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the ACE concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
                 "sections": 
 				[
                     {
@@ -102,7 +102,7 @@
 					},
 					{
 						"title": "Knowledge Center link to ",
-						"description": "Processing MQTT messages in IBM Integration Bus",
+						"description": "Processing MQTT messages in IBM App Connect Enterprise",
 						"link": "com.ibm.etools.mft.doc/bc62000_.htm",
 						"type": "help"
 					},
@@ -156,7 +156,7 @@
                                         "details": "On your smartphone/tablet/computer, start the simulator by browsing to <a href='http://quickstart.internetofthings.ibmcloud.com/iotsensor' target='_blank'>http://quickstart.internetofthings.ibmcloud.com/iotsensor</a>. The simulator connects automatically and starts publishing data. Keep your simulator window active and in the foreground."
                                     },
                                     {
-                                        "details":"Note the MAC address of the simulated device (displayed in the top right corner of the device screen; for example AF:01:C7:BB:E5:72). You will need this to complete the configuration of the message flow."
+                                        "details":"Note the MAC address of the simulated device (displayed in the top right corner of the device screen; for example a9a557601865). You will need this to complete the configuration of the message flow."
                                     
                                     }
                                 ]
@@ -206,7 +206,7 @@
 						                }
                                     },
                                     {
-                                        "details":"The <span class='parmname'>Topic name</span> property is blank and must be configured with a valid value. Enter the value <span class='userinput'>iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class='userinput'>&lt;deviceid&gt;</span> is the MAC address of the device that you simulated in the earlier step, with the colons removed and all letters in lowercase. For example, if the MAC address of your device is C2:AC:80:42:DA:D7 then the Topic name must be entered as <span class='userinput'>iot-2/type/+/id/c2ac8042dad7/evt/+/fmt/+</span>.",
+                                        "details":"The <span class='parmname'>Topic name</span> property is blank and must be configured with a valid value. Enter the value <span class='userinput'>iot-2/type/+/id/&lt;deviceid&gt;/evt/+/fmt/+</span> where <span class='userinput'>&lt;deviceid&gt;</span> identifies the MAC address of the device that you simulated in the earlier step (in the tutorial example a9a557601865, which is entered into the Topic name as <span class='userinput'>iot-2/type/+/id/a9a557601865/evt/+/fmt/+</span>.",
                                         "substeps": 
 						                {   
 							                "type": "unordered",
@@ -242,7 +242,7 @@
 					},
 					{
 						"title": "Knowledge Center link to ",
-						"description": "Processing MQTT messages in IBM Integration Bus",
+						"description": "Processing MQTT messages in IBM App Connect Enterprise",
 						"link": "com.ibm.etools.mft.doc/bc62000_.htm",
 						"type": "help"
 					},
@@ -297,7 +297,7 @@
                             "section": "Before deploying the application, you must ensure that the file system is ready for the data to be written to the output file by the message flow."
                         },
                         {
-                            "section": "The FileOoutput node is configured to write the data to a file in the output directory <span class='userinput'>C:\\fileout</span>",
+                            "section": "The FileOutput node is configured to write the data to a file in the output directory <span class='userinput'>C:\\fileout</span>",
                             "steps": 
 							{
                                 "type": "unordered",
@@ -311,7 +311,7 @@
 							                "details": 
 							                [
 								            {
-									            "details": "If you are using Linux, then you probably will need to change the <span class='parmname'>Directory</span> property."
+									            "details": "If you are using Linux, then you will need to change the <span class='parmname'>Directory</span> property."
 								            }
 							                ]
 						                }
@@ -387,7 +387,7 @@
                                 "details": 
 								[
                                     {
-                                        "details": "Open the MQTTSubscribe message flow, and click the Flow Exerciser icon <img src='http://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png' alt='' /> to start recording the message path through the flow.",
+                                        "details": "Open the MQTTSubscribe message flow, and click the Flow Exerciser icon <img src='https://ot4i.github.io/ot4i.tutorials//dist/images/icons/iib/startFlowExerciser.png' alt='' /> to start recording the message path through the flow.",
                                         "substeps": 
 						                {   
 							                "type": "unordered",
@@ -403,7 +403,7 @@
                                         "details": "Wait a few seconds to ensure that at least one event is published."
                                     },
                                     {
-                                        "details": "In the Flow Exerciser toolbar, click the View Path icon <img src='http://ot4i.github.io/iib-tutorials/images/icons/iib/viewPath.png' alt='View path' /> to highlight the message path through the message flow. Click on the connection to see the message data that passed between the MQTTSubscribe node and the FileOutput node."
+                                        "details": "In the Flow Exerciser toolbar, click the View Path icon <img src='https://ot4i.github.io/iib-tutorials/images/icons/iib/viewPath.png' alt='View path' /> to highlight the message path through the message flow. Click on the connection to see the message data that passed between the MQTTSubscribe node and the FileOutput node."
                                     },
                                     {
                                         "details": "In the <span class='code'>Message</span> tree of the data, you will see the <span class='code'>Properties</span> folder followed by a <span class='code'>JSON</span> folder, and this shows the same data that was written to the output file.",

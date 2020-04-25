@@ -41,7 +41,7 @@
             "helpLink": 
 			{
                 "text": "IBM Knowledge Center",
-                "link": "/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm"
+           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
             }
         },
         "pageDetails": 
@@ -103,14 +103,14 @@
 					{
 						"title": "Knowledge Center link to ",
 						"description": "Processing MQTT messages in IBM App Connect Enterprise",
-						"link": "com.ibm.etools.mft.doc/bc62000_.htm",
-						"type": "help"
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc62000_.htm",
+						"type": "web"
 					},
 										{
 						"title": "Knowledge Center link to ",
 						"description": "MQTTSubscribe node",
-						"link": "com.ibm.etools.mft.doc/bc46000_.htm",
-						"type": "help"
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc46000_.htm",
+						"type": "web"
 					},
 					{
 						"title": "Website link to ",
@@ -243,14 +243,14 @@
 					{
 						"title": "Knowledge Center link to ",
 						"description": "Processing MQTT messages in IBM App Connect Enterprise",
-						"link": "com.ibm.etools.mft.doc/bc62000_.htm",
-						"type": "help"
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc62000_.htm",
+						"type": "web"
 					},
 										{
 						"title": "Knowledge Center link to ",
 						"description": "MQTTSubscribe node",
-						"link": "com.ibm.etools.mft.doc/bc46000_.htm",
-						"type": "help"
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc46000_.htm",
+						"type": "web"
 					},
 					{
 						"title": "Website link to ",
@@ -342,12 +342,14 @@
                         {
 				            "title":"Knowledge Center link to ",
 				            "description":"Working with files",
-				            "link":"com.ibm.etools.mft.doc/ac55170_.htm"
+				            "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac55170_.htm",
+							"type":"web"
                         },
                         {
 				            "title":"Knowledge Center link to ",
 				            "description":"How to deploy and test message flows",
-				            "link":"com.ibm.etools.mft.doc/aa40160_"
+				            "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/aa40160_.htm",
+							"type":"web"
                         }
                     ]
                 },
@@ -437,12 +439,14 @@
                         {
                             "title": "Knowledge Center link to ",
                             "description": "Using local environment variables with MQTT nodes",
-                            "link": "com.ibm.etools.mft.doc/bc62011_.htm"
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc62011_.htm",
+							"type":"web"
                         },
                         {
                             "title": "Knowledge Center link to ",
                             "description": "Testing your message flow by using the Flow exerciser",
-                            "link": "com.ibm.etools.mft.doc/rt26110_.htm"
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/rt26110_.htm",
+							"type": "web"
                         }
                     ]
                 },

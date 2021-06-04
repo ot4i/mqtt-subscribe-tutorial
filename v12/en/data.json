@@ -40,8 +40,8 @@
             "resourceToOpen": "MQTTSubscribe",
             "helpLink": 
 			{
-                "text": "IBM Knowledge Center",
-           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+                "text": "IBM Documentation",
+           		"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/acesw_home.html"
             }
         },
         "pageDetails": 
@@ -101,15 +101,15 @@
 						"type": "web"
 					},
 					{
-						"title": "Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
 						"description": "Processing MQTT messages in IBM App Connect Enterprise",
-						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc62000_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bc62000_.htm",
 						"type": "web"
 					},
 										{
-						"title": "Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
 						"description": "MQTTSubscribe node",
-						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc46000_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bc46000_.htm",
 						"type": "web"
 					},
 					{
@@ -241,15 +241,15 @@
 						"type": "web"
 					},
 					{
-						"title": "Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
 						"description": "Processing MQTT messages in IBM App Connect Enterprise",
-						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc62000_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bc62000_.htm",
 						"type": "web"
 					},
 										{
-						"title": "Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
 						"description": "MQTTSubscribe node",
-						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc46000_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bc46000_.htm",
 						"type": "web"
 					},
 					{
@@ -340,15 +340,15 @@
                     "details": 
 					[
                         {
-				            "title":"Knowledge Center link to ",
+				            "title":"IBM Documentation link to ",
 				            "description":"Working with files",
-				            "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/ac55170_.htm",
+				            "link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/ac55170_.htm",
 							"type":"web"
                         },
                         {
-				            "title":"Knowledge Center link to ",
+				            "title":"IBM Documentation link to ",
 				            "description":"How to deploy and test message flows",
-				            "link":"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/aa40160_.htm",
+				            "link":"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/aa40160_.htm",
 							"type":"web"
                         }
                     ]
@@ -437,15 +437,15 @@
                     "details": 
 					[
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
                             "description": "Using local environment variables with MQTT nodes",
-                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bc62011_.htm",
+                            "link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bc62011_.htm",
 							"type":"web"
                         },
                         {
-                            "title": "Knowledge Center link to ",
+                            "title": "IBM Documentation link to ",
                             "description": "Testing your message flow by using the Flow exerciser",
-                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/rt26110_.htm",
+                            "link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/rt26110_.htm",
 							"type": "web"
                         }
                     ]
